@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Compliments 💕</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/shalma" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container dark-card">
+
+  <h1 class="shalma-font glow-text">For You 🌸</h1>
+  <p class="subtext">Tap the flower on each card</p>
+
+  <!-- Compliment Item -->
+  <div class="compliment-item">
+    <div class="flower" onclick="reveal(this)">✿</div>
+    <div class="compliment-card">✨ Beautiful inside & out</div>
+  </div>
+
+  <div class="compliment-item">
+    <div class="flower" onclick="reveal(this)">✿</div>
+    <div class="compliment-card">💗 My comfort person</div>
+  </div>
+
+  <div class="compliment-item">
+    <div class="flower" onclick="reveal(this)">✿</div>
+    <div class="compliment-card">🌸 Soft, kind & magical</div>
+  </div>
+
+  <div class="compliment-item">
+    <div class="flower" onclick="reveal(this)">✿</div>
+    <div class="compliment-card">💫 The reason I smile</div>
+  </div>
+
+  <button id="nextBtn" onclick="location.href='special.html'">
+    Next 💞
+  </button>
+
+</div>
+
+<script>
+  let revealed = 0;
+  function reveal(flower){
+    const card = flower.nextElementSibling;
+    if(!card.classList.contains("show")){
+      card.classList.add("show");
+      flower.style.display = "none";
+      revealed++;
+    }
+    if(revealed === 4){
+      document.getElementById("nextBtn").style.display = "inline-block";
+    }
+  }
+</script>
+
+</body>
+</html>

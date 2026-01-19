@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Letter 💌</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/shalma" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container dark-card">
+
+  <h1 class="shalma-font glow-text">A Letter For You 💖</h1>
+  <p class="subtext">Tap the envelope</p>
+
+  <!-- Envelope -->
+  <div class="envelope-box" onclick="openLetter()">
+    <div class="envelope-icon">💌</div>
+  </div>
+
+  <!-- Letter Content -->
+  <div id="letter" class="letter-content">
+    <p>
+      Hey Sifra,<br><br>
+      You make my days softer, my smiles real,  
+      and my heart feel safe.  
+      I may not say it every time,  
+      but you truly mean a lot to me 💗<br><br>
+      Always yours.
+    </p>
+  </div>
+
+  <!-- Next Button -->
+  <button id="finalBtn" onclick="location.href='final.html'">
+    One Last Thing 💍
+  </button>
+
+</div>
+
+<script>
+  function openLetter(){
+    document.querySelector('.envelope-box').style.display = "none";
+    document.getElementById('letter').classList.add('show');
+    setTimeout(()=>{
+      document.getElementById('finalBtn').style.display = "inline-block";
+    },800);
+  }
+</script>
+
+</body>
+</html>

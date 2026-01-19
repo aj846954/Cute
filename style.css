@@ -1,0 +1,577 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  min-height:100vh;
+  background:
+    radial-gradient(circle at top, #1b0014, #000),
+    repeating-radial-gradient(circle, rgba(255,255,255,.05) 0 1px, transparent 1px 40px);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:white;
+}
+
+/* Main box */
+.container{
+  width:90%;
+  max-width:420px;
+  text-align:center;
+  animation:fadeUp 1s ease;
+}
+
+/* Avatar */
+.avatar-glow{
+  width:130px;
+  height:130px;
+  margin:0 auto 20px;
+  border-radius:50%;
+  background:radial-gradient(circle,#ff4f81,#3b001f);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 0 40px rgba(255,79,129,.6);
+}
+
+.avatar-glow img{
+  width:90px;
+  height:90px;
+  border-radius:50%;
+}
+
+/* Heading */
+.shalma-font{
+  font-family:'Shalma', cursive;
+  font-size:52px;        /* ⬅️ TEXT BADA */
+  line-height:1.2;
+  letter-spacing:1.5px;
+}
+@media (max-width:480px){
+  .shalma-font{
+    font-size:42px;
+  }
+}
+
+
+.glow-text{
+  color:#ff6fae;
+  text-shadow:0 0 12px rgba(255,111,174,.8);
+}
+
+.subtext{
+  font-size:15px;
+  opacity:.85;
+  margin:0 30px;
+}
+
+/* Button */
+.pink-btn{
+  padding:14px 32px;
+  border:none;
+  border-radius:30px;
+  background:linear-gradient(90deg,#ff4f81,#ff79b0);
+  color:white;
+  font-size:15px;
+  cursor:pointer;
+  box-shadow:0 10px 25px rgba(255,79,129,.5);
+  transition:.3s;
+}
+
+.pink-btn:hover{
+  transform:scale(1.06);
+}
+
+/* Animation */
+@keyframes fadeUp{
+  from{opacity:0; transform:translateY(30px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+/* Dark card */
+.dark-card{
+  background:rgba(20,0,15,0.6);
+  padding:35px 25px;
+  border-radius:25px;
+  box-shadow:0 0 40px rgba(255,79,129,.3);
+}
+
+/* Avatar glow */
+/* Avatar glow - center perfectly */
+.avatar-glow{
+  width:140px;
+  height:140px;
+  margin:0 auto 25px;   /* CENTER */
+  border-radius:50%;
+  background:radial-gradient(circle,#ff4f81,#2b0016);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  box-shadow:0 0 35px rgba(255,79,129,.6);
+}
+
+.avatar-glow img{
+  width:90px;
+  height:90px;
+  object-fit:contain;
+}
+.avatar-glow{
+  animation:float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+  0%{transform:translateY(0);}
+  50%{transform:translateY(-8px);}
+  100%{transform:translateY(0);}
+}
+
+
+/* Loading text */
+.loading-text{
+  font-size:14px;
+  opacity:.85;
+  margin-bottom:8px;
+}
+
+#percentText{
+  font-size:34px;
+  color:#ff6fae;
+  margin-bottom:15px;
+}
+
+/* Warning */
+.warning-text{
+  display:none;
+  margin-top:15px;
+  color:#ff7aa2;
+  font-size:14px;
+  animation:pulse 1s infinite alternate;
+}
+
+/* Button */
+/* Continue Button – Premium Pink */
+#nextBtn{
+  display:none;
+  margin-top:22px;
+  padding:14px 36px;
+  border:none;
+  border-radius:30px;
+  background:linear-gradient(90deg,#ff4f81,#ff7ab6);
+  color:white;
+  font-size:15px;
+  font-weight:500;
+  cursor:pointer;
+  box-shadow:0 10px 25px rgba(255,79,129,.55);
+  transition:transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+#nextBtn:hover{
+  transform:scale(1.07);
+  box-shadow:0 14px 35px rgba(255,79,129,.7);
+}
+/* Compliments page text */
+.subtext{
+  font-size:14px;
+  opacity:0.85;
+  margin-bottom:25px;
+}
+
+/* Compliment cards */
+.compliment-card{
+  background:rgba(255,255,255,0.12);
+  padding:14px 18px;
+  border-radius:18px;
+  margin:12px 0;
+  font-size:15px;
+  animation:fadeUp 0.8s ease both;
+  box-shadow:0 6px 18px rgba(255,79,129,.15);
+}
+
+/* Stagger animation */
+.compliment-card:nth-child(3){animation-delay:.1s;}
+.compliment-card:nth-child(4){animation-delay:.2s;}
+.compliment-card:nth-child(5){animation-delay:.3s;}
+.compliment-card:nth-child(6){animation-delay:.4s;}
+
+/* Button reuse */
+.pink-btn{
+  margin-top:25px;
+  padding:14px 34px;
+  border:none;
+  border-radius:30px;
+  background:linear-gradient(90deg,#ff4f81,#ff7ab6);
+  color:white;
+  font-size:15px;
+  cursor:pointer;
+  box-shadow:0 10px 25px rgba(255,79,129,.5);
+  transition:.3s;
+}
+
+.pink-btn:hover{
+  transform:scale(1.06);
+}
+
+/* Flower button */
+.flower-btn{
+  font-size:40px;
+  margin:20px auto 30px;
+  cursor:pointer;
+  animation:flowerPulse 1.2s infinite;
+  width:60px;
+  height:60px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  background:rgba(255,255,255,0.15);
+}
+
+@keyframes flowerPulse{
+  0%{transform:scale(1);}
+  50%{transform:scale(1.15);}
+  100%{transform:scale(1);}
+}
+
+/* Compliment wrapper */
+.compliment-item{
+  margin:14px 0;
+  position:relative;
+}
+
+/* Flower icon */
+.flower{
+  font-size:28px;
+  cursor:pointer;
+  margin-bottom:6px;
+  animation:flowerPulse 1.2s infinite;
+}
+
+@keyframes flowerPulse{
+  0%{transform:scale(1);}
+  50%{transform:scale(1.2);}
+  100%{transform:scale(1);}
+}
+
+/* Compliment hidden initially */
+.compliment-card{
+  display:none;
+  background:rgba(255,255,255,0.15);
+  padding:14px 18px;
+  border-radius:18px;
+  font-size:15px;
+  box-shadow:0 6px 18px rgba(255,79,129,.15);
+}
+
+/* Reveal animation */
+.compliment-card.show{
+  display:block;
+  animation:fadeUp 0.6s ease;
+}
+
+/* Next button hidden */
+#nextBtn{
+  display:none;
+  margin-top:25px;
+}
+/* Special page gif */
+.special-gif{
+  width:150px;
+  height:150px;
+  margin:0 auto 20px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.special-gif img{
+  width:120px;
+  height:120px;
+  border-radius:20px;
+}
+
+/* Special text */
+.special-text{
+  font-size:15px;
+  opacity:0.9;
+  margin:15px 0 30px;
+  line-height:1.6;
+}
+
+/* Reuse pink button */
+.pink-btn{
+  padding:14px 34px;
+  border:none;
+  border-radius:30px;
+  background:linear-gradient(90deg,#ff4f81,#ff7ab6);
+  color:white;
+  font-size:15px;
+  cursor:pointer;
+  box-shadow:0 10px 25px rgba(255,79,129,.5);
+  transition:.3s;
+}
+
+.pink-btn:hover{
+  transform:scale(1.06);
+}
+/* Envelope */
+.envelope-box{
+  width:120px;
+  height:120px;
+  margin:20px auto;
+  border-radius:20px;
+  background:rgba(255,255,255,0.15);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  cursor:pointer;
+  animation:float 2.5s ease-in-out infinite;
+}
+
+.envelope-icon{
+  font-size:50px;
+}
+
+/* Floating animation */
+@keyframes float{
+  0%{transform:translateY(0);}
+  50%{transform:translateY(-8px);}
+  100%{transform:translateY(0);}
+}
+
+/* Letter content */
+.letter-content{
+  display:none;
+  background:rgba(255,255,255,0.12);
+  padding:20px;
+  border-radius:20px;
+  margin-top:20px;
+  font-size:14px;
+  line-height:1.7;
+}
+
+/* Show letter */
+.letter-content.show{
+  display:block;
+  animation:fadeUp 0.7s ease;
+}
+
+/* Final button – romantic premium */
+#finalBtn{
+  display:none;
+  margin-top:30px;
+  padding:14px 38px;
+  border:none;
+  border-radius:40px;
+  background:linear-gradient(135deg,#ff4f81,#ff7ab6,#ff9acb);
+  color:white;
+  font-size:16px;
+  font-weight:500;
+  cursor:pointer;
+  box-shadow:
+    0 10px 25px rgba(255,79,129,.5),
+    0 0 20px rgba(255,154,203,.4);
+  transition:all 0.3s ease;
+  position:relative;
+  overflow:hidden;
+}
+
+/* Hover effect */
+#finalBtn:hover{
+  transform:scale(1.08);
+  box-shadow:
+    0 15px 35px rgba(255,79,129,.7),
+    0 0 30px rgba(255,154,203,.6);
+}
+
+/* Shine animation */
+#finalBtn::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-100%;
+  width:100%;
+  height:100%;
+  background:linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.6),
+    transparent
+  );
+  animation:shine 2.5s infinite;
+}
+
+@keyframes shine{
+  0%{left:-100%;}
+  60%{left:100%;}
+  100%{left:100%;}
+}
+/* =========================
+   FINAL PAGE – CLEAN STYLE
+========================= */
+
+.final-clean{
+  padding:50px 30px;
+}
+
+/* Heading */
+.final-heading{
+  font-size:46px;
+  margin-bottom:20px;
+  text-shadow:0 0 12px rgba(255,255,255,0.25);
+}
+
+/* Sub text */
+.final-sub{
+  font-size:14px;
+  opacity:0.8;
+  margin-bottom:25px;
+  line-height:1.7;
+}
+
+/* One-line promise */
+.final-line{
+  font-size:16px;
+  letter-spacing:0.5px;
+  margin-bottom:40px;
+  animation:fadeIn 2s ease forwards;
+}
+
+/* Button */
+.final-btn{
+  padding:12px 36px;
+  border:none;
+  border-radius:30px;
+  background:#ffffff;
+  color:#111;
+  font-size:14px;
+  cursor:pointer;
+  transition:all 0.3s ease;
+}
+
+.final-btn:hover{
+  background:#ff4f81;
+  color:white;
+  transform:scale(1.05);
+}
+
+/* Fade in */
+@keyframes fadeIn{
+  from{opacity:0;}
+  to{opacity:1;}
+}
+/* =========================
+   RESPONSIVE FIX – ALL DEVICES
+========================= */
+
+/* Prevent horizontal overflow */
+html, body{
+  max-width:100%;
+  overflow-x:hidden;
+}
+
+/* ---------- MOBILE (small phones) ---------- */
+@media (max-width: 480px){
+
+  body{
+    padding:12px;
+  }
+
+  .container{
+    max-width:100%;
+  }
+
+  .dark-card{
+    padding:26px 18px;
+    border-radius:22px;
+  }
+
+  .shalma-font{
+    font-size:38px;   /* big but safe */
+    line-height:1.15;
+  }
+
+  .subtext,
+  .loading-text,
+  .final-sub{
+    font-size:13px;
+  }
+
+  .avatar-glow{
+    width:120px;
+    height:120px;
+  }
+
+  .avatar-glow img{
+    width:80px;
+    height:80px;
+  }
+
+  .special-gif{
+    width:130px;
+    height:130px;
+  }
+
+  .special-gif img{
+    width:100px;
+    height:100px;
+  }
+
+  button,
+  .pink-btn,
+  #nextBtn,
+  #finalBtn,
+  .final-btn{
+    width:100%;
+    max-width:280px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+}
+
+/* ---------- TABLET ---------- */
+@media (min-width: 481px) and (max-width: 900px){
+
+  body{
+    padding:20px;
+  }
+
+  .container{
+    max-width:520px;
+  }
+
+  .dark-card{
+    padding:35px 30px;
+  }
+
+  .shalma-font{
+    font-size:46px;
+  }
+
+  .avatar-glow{
+    width:140px;
+    height:140px;
+  }
+}
+
+/* ---------- LAPTOP & DESKTOP ---------- */
+@media (min-width: 901px){
+
+  body{
+    padding:40px;
+  }
+
+  .container{
+    max-width:520px;
+  }
+
+  .dark-card{
+    padding:45px 35px;
+  }
+
+  .shalma-font{
+    font-size:52px;
+  }
+}

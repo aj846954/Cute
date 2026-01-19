@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cuteness Meter 💗</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container dark-card">
+
+  <!-- GIF -->
+  <div class="avatar-glow">
+    <img src="cute.gif" alt="cute gif">
+  </div>
+
+  <!-- Text -->
+  <p class="loading-text">Measuring your cuteness...</p>
+  <h2 id="percentText">0%</h2>
+
+  <!-- Progress Bar -->
+  <div class="progress-box">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- Warning -->
+  <p id="warning" class="warning-text">
+    ⚠️ WARNING: TOO CUTE TO HANDLE
+  </p>
+
+  <!-- Button -->
+  <button id="nextBtn" onclick="location.href='compliments.html'">
+    Continue 💖
+  </button>
+
+</div>
+
+<script src="script.js"></script>
+<script>
+  startLinearLoading();
+</script>
+
+</body>
+</html>

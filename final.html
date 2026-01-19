@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Always.</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/shalma" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container dark-card final-clean">
+
+  <h1 class="shalma-font final-heading" id="typeText"></h1>
+
+  <p class="final-sub">
+    No matter what comes,<br>
+    no matter where life takes us —
+  </p>
+
+  <p class="final-line">
+    <strong>you will always be my choice.</strong>
+  </p>
+
+  <button class="final-btn" onclick="location.href='index.html'">
+    Read Again
+  </button>
+
+</div>
+
+<script>
+  const text = "Forever & Always";
+  let i = 0;
+  const speed = 90;
+
+  function typeEffect(){
+    if(i < text.length){
+      document.getElementById("typeText").innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typeEffect, speed);
+    }
+  }
+  window.onload = typeEffect;
+</script>
+
+</body>
+</html>
